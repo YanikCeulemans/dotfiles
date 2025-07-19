@@ -1,6 +1,8 @@
 #!/usr/bin/env sh
 set -euo
 
+niri msg action do-screen-transition
+
 if test "$(gsettings get org.gnome.desktop.interface color-scheme)" = "'prefer-light'"; then
   sed -i 's/catppuccin-latte/catppuccin-frappe/' ~/.config/fuzzel/fuzzel.ini
   gsettings set org.gnome.desktop.interface color-scheme prefer-dark
