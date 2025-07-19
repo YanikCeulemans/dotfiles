@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Toggle dark mode
+Comment=Toggle the system theme between light and dark
+Exec="/home/yanikc/.config/yanikc/toggle-dark-mode.sh" %U
+Terminal=false
+Type=Application
+Categories=Utility;
+X-Desktop-File-Install-Version=0.26
