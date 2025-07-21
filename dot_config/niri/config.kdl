@@ -173,7 +173,7 @@ layout {
         active-color "#c7f094"
 
         // Color of the ring on inactive monitors.
-        inactive-color "#505050"
+        inactive-color "#26301a"
 
         // You can also use gradients. They take precedence over solid colors.
         // Gradients are rendered the same as CSS linear-gradient(angle, from, to).
