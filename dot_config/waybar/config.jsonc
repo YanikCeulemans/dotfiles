@@ -75,8 +75,15 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "format-alt": "{:%Y-%m-%d %H:%M}",
+        "calendar": {
+            "format": {
+                "days": "<big>{}</big>",
+                "weekdays": "<big>{}</big>",
+                "today": "<big><span color='#c7f094'><b><u>{}</u></b></span></big>"
+            }
+        }
     },
     "cpu": {
         "format": "{usage}% ",
