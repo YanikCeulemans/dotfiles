@@ -4,9 +4,7 @@
 }
 
 window#waybar {
-    /* background-color: rgba(43, 48, 59, 0.5); */
     background-color: rgba(16, 30, 17, 0.5);
-    /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -46,11 +44,6 @@ button {
 button:hover {
     background: inherit;
     box-shadow: inset 0 -3px #ffffff;
-}
-
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-    background-color: #a37800;
 }
 
 #workspaces button {
@@ -101,6 +94,21 @@ button:hover {
     color: #ffffff;
 }
 
+#clock:hover,
+#battery:hover,
+#disk:hover,
+#pulseaudio:hover,
+#wireplumber:hover,
+#custom-media:hover,
+#custom-power:hover,
+#mode:hover,
+#idle_inhibitor:hover,
+#scratchpad:hover,
+#power-profiles-daemon:hover,
+#mpd:hover {
+    box-shadow: inset 0 -3px #ffffff;
+}
+
 #window,
 #workspaces {
     margin: 0 4px;
@@ -117,7 +125,6 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
 }
 
 #battery {
@@ -172,12 +179,9 @@ label:focus {
 }
 
 #cpu {
-    background-color: #2ecc71;
-    color: #000000;
 }
 
 #memory {
-    background-color: #9b59b6;
 }
 
 #disk {
@@ -197,13 +201,9 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
 }
 
 #wireplumber {
@@ -238,7 +238,6 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
 }
 
 #tray > .passive {
@@ -251,7 +250,6 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
 }
 
 #idle_inhibitor.activated {
