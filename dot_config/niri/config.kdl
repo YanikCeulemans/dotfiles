@@ -374,7 +374,11 @@ binds {
 
     Mod+Shift+W hotkey-overlay-title="Open a browser: Firefox" { spawn "firefox"; }
 
-    Mod+Shift+S { spawn "kitty" "--app-id=Scratchpad" "-o" "confirm_os_window_close=0" "zsh" "-c" "nvim ~/Documents/scratchpad.md"; }
+    Mod+Shift+S { 
+        spawn "kitty" "--app-id=Scratchpad" "-o" "confirm_os_window_close=0" "zsh" "-c" "nvim ~/Documents/scratchpad.md"; 
+    }
+
+    Mod+Alt+V { spawn "clipcat-menu"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
