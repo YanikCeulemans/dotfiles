@@ -14,6 +14,7 @@
     ],
     "modules-right": [
         "idle_inhibitor",
+        "mpris",
         "pulseaudio",
         "custom/media",
         // "power-profiles-daemon",
@@ -63,6 +64,21 @@
         "format-icons": {
             "activated": "",
             "deactivated": ""
+        }
+    },
+    "mpris": {
+        "dynamic-len": 40,
+        "dynamic-order": ["title", "artist"],
+        "format": "{status_icon} {dynamic}",
+        "status-icons": {
+            "playing": "",
+            "paused": "",
+            "stopped": ""
+        },
+        "player-icons": {
+            "spotify": "",
+            "firefox": "󰈹",
+            "plasma-browser-integration": "󰈹"
         }
     },
     "tray": {
