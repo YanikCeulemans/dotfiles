@@ -103,6 +103,8 @@ export EDITOR='nvim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-PROMPT='[%D{%f/%m/%y} %D{%k:%M:%S}] '$PROMPT
+PROMPT='[%D{%k:%M:%S}] '$PROMPT
+
+# export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 eval "$(/home/yanikc/.local/bin/mise activate zsh)" # added by https://mise.run/zsh
