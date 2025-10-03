@@ -263,13 +263,10 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
-// This line starts waybar, a commonly used bar for Wayland compositors.
-// spawn-at-startup "waybar"
-// spawn-at-startup "mako"
-// spawn-at-startup "/usr/libexec/kf6/polkit-kde-authentication-agent-1"
+spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
 spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"
 spawn-at-startup "xwayland-satellite"
-// spawn-at-startup "swaybg" "-i" "~/.config/wallpapers/2560x1600.jpg"
+spawn-at-startup "dms" "run"
 
 environment {
     DISPLAY ":0"
@@ -368,17 +365,23 @@ binds {
 
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
 
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+D hotkey-overlay-title="Application Launcher" {
+        spawn "dms" "ipc" "call" "spotlight" "toggle";
+    }
 
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Super+Alt+L hotkey-overlay-title="Lock Screen" {
+        spawn "dms" "ipc" "call" "lock" "lock";
+    }
 
     Mod+Shift+W hotkey-overlay-title="Open a browser: Firefox" { spawn "firefox"; }
 
-    Mod+Shift+S { 
+    Mod+Shift+S {
         spawn "kitty" "--app-id=Scratchpad" "-o" "confirm_os_window_close=0" "zsh" "-c" "nvim ~/Documents/scratchpad.md"; 
     }
 
-    Mod+Alt+V { spawn "clipcat-menu"; }
+    Mod+Alt+V {
+        spawn "dms" "ipc" "call" "clipboard" "toggle";
+    }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.

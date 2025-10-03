@@ -108,3 +108,4 @@ PROMPT='[%D{%k:%M:%S}] '$PROMPT
 # export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 eval "$(/home/yanikc/.local/bin/mise activate zsh)" # added by https://mise.run/zsh
+eval "$(zoxide init zsh)"
