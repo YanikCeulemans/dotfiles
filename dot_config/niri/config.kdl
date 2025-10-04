@@ -263,9 +263,9 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
+spawn-at-startup "xwayland-satellite"
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
 spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"
-spawn-at-startup "xwayland-satellite"
 spawn-at-startup "dms" "run"
 
 environment {
@@ -342,6 +342,11 @@ window-rule {
 
 window-rule {
     match app-id="Scratchpad"
+    open-floating true
+}
+
+window-rule {
+    match app-id="org.gnome.NautilusPreviewer"
     open-floating true
 }
 
