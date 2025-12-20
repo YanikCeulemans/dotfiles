@@ -268,7 +268,6 @@ layout {
 // spawn-at-startup "xwayland-satellite"
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
 spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"
-spawn-at-startup "dms" "run"
 
 /-environment {
     DISPLAY ":0"
@@ -638,3 +637,7 @@ binds {
     // Mod+Shift+P { power-off-monitors; }
     Mod+Shift+M { power-off-monitors; }
 }
+
+include "dms/colors.kdl"
+include "dms/layout.kdl"
+include "dms/alttab.kdl"

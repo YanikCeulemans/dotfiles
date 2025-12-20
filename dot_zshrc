@@ -105,6 +105,7 @@ export EDITOR='nvim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 PROMPT='[%D{%k:%M:%S}] '$PROMPT
 
+export PATH=/home/yanikc/.local/bin/azure-functions-cli:$PATH
 # export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 eval "$(/home/yanikc/.local/bin/mise activate zsh)" # added by https://mise.run/zsh
