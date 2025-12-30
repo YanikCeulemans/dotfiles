@@ -22,6 +22,8 @@ $env.config.cursor_shape.vi_insert = "line"       # Cursor shape in vi-insert mo
 $env.config.cursor_shape.vi_normal = "block"  # Cursor shape in normal vi mode
 $env.config.completions.algorithm = "fuzzy"
 
+alias n = nvim
+
 # See also Awesome Nu: https://github.com/nushell/awesome-nu?tab=readme-ov-file
 
 # cloned from repo: https://github.com/KamilKleina/git-aliases.nu
