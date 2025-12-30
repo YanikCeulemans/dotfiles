@@ -23,4 +23,4 @@ zoxide init nushell | save --force $zoxide_path
 
 # Added manually following instructions from: https://mise.jdx.dev/installing-mise.html#nushell
 let mise_path = $nu.default-config-dir | path join mise.nu
-^mise activate nu | save --force $mise_path
+^/home/yanikc/.local/bin/mise activate nu | save --force $mise_path
