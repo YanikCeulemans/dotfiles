@@ -23,6 +23,7 @@ $env.config.cursor_shape.vi_normal = "block"  # Cursor shape in normal vi mode
 $env.config.completions.algorithm = "fuzzy"
 
 alias n = nvim
+alias fg = job unfreeze
 
 # See also Awesome Nu: https://github.com/nushell/awesome-nu?tab=readme-ov-file
 
