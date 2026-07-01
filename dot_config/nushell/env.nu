@@ -17,6 +17,8 @@
 # You can remove these comments if you want or leave
 # them for future reference.
 
+$env.editor = 'nvim'
+
 # Added manually following instructions from: https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
 let zoxide_path = $nu.default-config-dir | path join zoxide.nu
 zoxide init nushell | save --force $zoxide_path

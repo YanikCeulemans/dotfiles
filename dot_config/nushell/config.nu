@@ -22,6 +22,7 @@ $env.config.cursor_shape.vi_insert = "line"       # Cursor shape in vi-insert mo
 $env.config.cursor_shape.vi_normal = "block"  # Cursor shape in normal vi mode
 $env.config.completions.algorithm = "fuzzy"
 
+alias l = ls -la
 alias n = nvim
 alias fg = job unfreeze
 
@@ -33,5 +34,6 @@ overlay use ./git-aliases.nu/git-aliases.nu
 # cloned from repo: https://github.com/nushell/nu_scripts/blob/main/custom-completions/git/git-completions.nu
 source ./nu_scripts/custom-completions/git/git-completions.nu
 
+source ([$nu.default-config-dir completions] | path join completions-jj.nu)
 source ($nu.default-config-dir | path join zoxide.nu)
 use ($nu.default-config-dir | path join mise.nu)
