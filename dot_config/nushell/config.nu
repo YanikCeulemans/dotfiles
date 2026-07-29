@@ -22,7 +22,7 @@ $env.config.cursor_shape.vi_insert = "line"       # Cursor shape in vi-insert mo
 $env.config.cursor_shape.vi_normal = "block"  # Cursor shape in normal vi mode
 $env.config.completions.algorithm = "fuzzy"
 
-alias l = ls -la
+alias l = ls -a
 alias n = nvim
 alias fg = job unfreeze
 
