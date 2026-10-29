@@ -18,6 +18,7 @@
 # them for future reference.
 
 $env.editor = 'nvim'
+$env.SSH_AUTH_SOCK = '/home/yanikc/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock'
 
 # Added manually following instructions from: https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
 let zoxide_path = $nu.default-config-dir | path join zoxide.nu
