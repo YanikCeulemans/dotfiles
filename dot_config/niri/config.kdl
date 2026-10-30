@@ -360,6 +360,10 @@ window-rule {
     default-floating-position x=10 y=10 relative-to="bottom-right"
 }
 
+hotkey-overlay {
+    skip-at-startup
+}
+
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
     // in the end. To find an XKB name for a particular key, you may use a program
@@ -390,7 +394,7 @@ binds {
 
     Mod+Shift+W hotkey-overlay-title="Open a browser: Firefox" { spawn "firefox"; }
 
-    Mod+Shift+S {
+    Mod+Shift+S hotkey-overlay-title="Open a scratchpad: Kitty" {
         spawn "kitty" "--app-id=Scratchpad" "-o" "confirm_os_window_close=0" "zsh" "-c" "nvim ~/Documents/scratchpad.md"; 
     }
 
