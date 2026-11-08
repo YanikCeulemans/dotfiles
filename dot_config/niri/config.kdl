@@ -270,6 +270,7 @@ layout {
 // spawn-at-startup "xwayland-satellite"
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
 spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"
+spawn-sh-at-startup "/home/yanikc/.local/bin/oniri -R -T"
 
 environment {
     // DISPLAY ":0"
@@ -382,7 +383,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     // Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
 
-    Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: Ghostty" { spawn "ghostty"; }
 
     Mod+D hotkey-overlay-title="Application Launcher" {
         spawn "dms" "ipc" "call" "spotlight" "toggle";
@@ -654,4 +655,5 @@ binds {
 include "dms/colors.kdl"
 include "dms/layout.kdl"
 include "dms/alttab.kdl"
+include optional=true "dms/binds-next.kdl"
 include "dms/binds.kdl"
