@@ -350,7 +350,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="Scratchpad"
+    match app-id="ghostty.scratchpad"
     match app-id="org.gnome.NautilusPreviewer"
     match app-id=r#"org.quickshell$"#
     open-floating true
@@ -395,8 +395,8 @@ binds {
 
     Mod+Shift+W hotkey-overlay-title="Open a browser: Firefox" { spawn "firefox"; }
 
-    Mod+Shift+S hotkey-overlay-title="Open a scratchpad: Kitty" {
-        spawn "kitty" "--app-id=Scratchpad" "-o" "confirm_os_window_close=0" "zsh" "-c" "nvim ~/Documents/scratchpad.md"; 
+    Mod+Shift+S hotkey-overlay-title="Open a scratchpad: Ghostty" {
+        spawn "ghostty" "--class=ghostty.scratchpad" "--confirm-close-surface=false" "-e" "zsh" "-c" "nvim ~/Documents/scratchpad.md"; 
     }
 
     Mod+Alt+V {
